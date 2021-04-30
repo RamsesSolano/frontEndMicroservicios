@@ -13,14 +13,12 @@ export class BusinessComponent implements OnInit {
   displayedColumns: String[] = [
     'businessName',
     'direction',
-    /*
-    'firstName',
     'identificationNumber',
+    'firstName',
     'otherName',
-    'phone',
+    'surname',
     'secondSurname',
-    'surname'
-    */
+    'phone'
    ];
 
   constructor(

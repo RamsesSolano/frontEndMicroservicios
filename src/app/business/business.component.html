@@ -13,46 +13,48 @@
                         <table mat-table [dataSource]="allBusiness">
 
                             <ng-container matColumnDef="businessName">
-                                <th mat-header-cell *matHeaderCellDef> No. </th>
+                                <th mat-header-cell *matHeaderCellDef> Nombre empresa </th>
                                 <td mat-cell *matCellDef="let element"> {{element.businessName}} </td>
                             </ng-container>
 
-                            <!--
+
                             <ng-container matColumnDef="direction">
                                 <th mat-header-cell *matHeaderCellDef> Direccion </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="firstName">
-                                <th mat-header-cell *matHeaderCellDef> Primer nombre </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
+                                <td mat-cell *matCellDef="let element"> {{element.direction}} </td>
                             </ng-container>
 
                             <ng-container matColumnDef="identificationNumber">
-                                <th mat-header-cell *matHeaderCellDef> Numero de identificacion </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
+                                <th mat-header-cell *matHeaderCellDef> Identificacion </th>
+                                <td mat-cell *matCellDef="let element"> {{element.identificationNumber}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="firstName">
+                                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                                <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
                             </ng-container>
 
                             <ng-container matColumnDef="otherName">
                                 <th mat-header-cell *matHeaderCellDef> Segundo nombre </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="phone">
-                                <th mat-header-cell *matHeaderCellDef> Telefono </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="secondSurname">
-                                <th mat-header-cell *matHeaderCellDef> Segundo apellido </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
+                                <td mat-cell *matCellDef="let element"> {{element.otherName}} </td>
                             </ng-container>
 
                             <ng-container matColumnDef="surname">
                                 <th mat-header-cell *matHeaderCellDef> Apellido </th>
-                                <td mat-cell *mayCellDef="let element"> </td>
+                                <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
                             </ng-container>
--->
+
+                            <ng-container matColumnDef="secondSurname">
+                                <th mat-header-cell *matHeaderCellDef> Segundo apellido </th>
+                                <td mat-cell *matCellDef="let element"> {{element.secondSurname}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="phone">
+                                <th mat-header-cell *matHeaderCellDef> Telefono </th>
+                                <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                            </ng-container>
+
+
+
                             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
