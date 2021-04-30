@@ -47,4 +47,27 @@ export class CoreService {
         } )).toPromise()
   }
 
+  deleteToApi = <T>(url: string, params?: any ): Promise<T> => {
+    return this._http
+      .delete<T>( this.apiPath + url, { observe: 'response', params: params} )
+      .pipe(
+        map( response => {
+          return response.body as T;
+        })
+       ).toPromise();
+  }
+
+  patchToApi = <T>( url: string, body: any): Promise<T> => {
+    return this._http
+      .patch<T>( this.apiPath + url, body, { headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Access-Control-Allow-Origin': '*'
+      }, observe: 'response' })
+      .pipe(
+        map( response => {
+          return response.body as T;
+        } )
+      ).toPromise();
+  }
+
 }

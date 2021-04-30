@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyResponse } from '../models/companyResponse';
+import { BusinessService } from './business.service';
 
 @Component({
   selector: 'app-business',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessComponent implements OnInit {
 
-  constructor() { }
+  allBusiness: Array<CompanyResponse> = [];
+  displayedColumns: String[] = [
+    'businessName',
+    'direction',
+    /*
+    'firstName',
+    'identificationNumber',
+    'otherName',
+    'phone',
+    'secondSurname',
+    'surname'
+    */
+   ];
+
+  constructor(
+    private businessService: BusinessService
+  ) { }
 
   ngOnInit(): void {
+    this.businessService.getAllBusiness().then( (value: Array<CompanyResponse>  ) => {
+      this.allBusiness = value;
+      console.log( value );
+      console.log( this.allBusiness );
+    } )
   }
 
 }

@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  @Input( "nombreInput" ) dato: String;
-
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,70 @@
-<p>business works!</p>
+<div class="row mt-5 ">
+    <div class="col">
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">
+                    Empresas registradas
+                </h2>
+
+                <div class="row">
+                    <div class="col">
+
+                        <table mat-table [dataSource]="allBusiness">
+
+                            <ng-container matColumnDef="businessName">
+                                <th mat-header-cell *matHeaderCellDef> No. </th>
+                                <td mat-cell *matCellDef="let element"> {{element.businessName}} </td>
+                            </ng-container>
+
+                            <!--
+                            <ng-container matColumnDef="direction">
+                                <th mat-header-cell *matHeaderCellDef> Direccion </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="firstName">
+                                <th mat-header-cell *matHeaderCellDef> Primer nombre </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="identificationNumber">
+                                <th mat-header-cell *matHeaderCellDef> Numero de identificacion </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="otherName">
+                                <th mat-header-cell *matHeaderCellDef> Segundo nombre </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="phone">
+                                <th mat-header-cell *matHeaderCellDef> Telefono </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="secondSurname">
+                                <th mat-header-cell *matHeaderCellDef> Segundo apellido </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="surname">
+                                <th mat-header-cell *matHeaderCellDef> Apellido </th>
+                                <td mat-cell *mayCellDef="let element"> </td>
+                            </ng-container>
+-->
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                        </table>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
